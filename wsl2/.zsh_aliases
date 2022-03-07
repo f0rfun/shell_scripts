@@ -1,0 +1,22 @@
+alias gsa='(~/wins/allGitStatus.sh)'
+alias docker_ps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.RunningFor}}"'
+alias compose='cd ~/wins/wins-ep-dev && docker compose logs -f --tail=30'
+alias docker_stop='docker stop $(docker ps -aq)'
+alias docker_prune='docker system prune --volumes -f'
+
+function jauto_headless() {
+  toilet --filter border Automation! | lolcat
+  if [ -z $1 ]; then
+    #toilet -f bigmono9 -F gay @jhwu
+    cd ~/wins/wins-ep-jautomation
+    mvn clean install -DsuiteXmlFile=testng_all.xml -Dtestname=all -Dcucumber.ansi-colors.disabled=false -Dtest.ubuntu=true -Dtest.auto.driver.chrome.headless=true -Dcucumber.filter.tags=@jhwu
+  else
+    #toilet -f bigmono9 -F gay $1
+    cd ~/wins/wins-ep-jautomation
+    mvn clean install -DsuiteXmlFile=testng_all.xml -Dtestname=all -Dcucumber.ansi-colors.disabled=false -Dtest.ubuntu=true -Dtest.auto.driver.chrome.headless=true -Dcucumber.filter.tags=$1
+  fi
+
+  d=$(date +"%Y_%m_%d_%I_%M_%p")
+
+  mkdir -p ~/automation-result/$d/ && cp -R ~/wins/wins-ep-jautomation/target/site/ ~/automation-result/$d/
+}

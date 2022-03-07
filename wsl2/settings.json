@@ -1,0 +1,74 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+     // #AUTO FORMAT
+     "editor.formatOnSave": false,
+     "editor.formatOnPaste": true,
+     "editor.formatOnType": true,
+     "editor.codeActionsOnSave": {
+       "source.fixAll.eslint": true,
+       "vue.fixAll.eslint": true,
+       "html.fixAll.eslint": true,
+       "javascript.fixAll.eslint": true,
+       "source.fixAll.markdownlint": true
+     },
+     "[json]": {
+       "editor.formatOnSave": true,
+       "editor.insertSpaces": true,
+       "editor.tabSize": 2
+     },
+     "[markdown]": {
+       "editor.formatOnSave": true
+     },
+     "[shellscript]": {
+       "editor.formatOnSave": true,
+       "editor.tabSize": 2
+     },
+     "[java]": {
+      "editor.formatOnSave": true
+     },
+     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+     "files.insertFinalNewline": true,    
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },  
+    "terminal.integrated.inheritEnv": false,
+    "jest.debugCodeLens.showWhenTestStateIn": [
+        "fail",
+        "unknown",
+        "pass"
+    ],    
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.colorCustomizations": {
+      "tab.border": "#ff0000",
+      "tab.activeBackground": "#0A84FF"
+    },
+    // "workbench.colorCustomizations": {
+    //     "[One Dark Pro]": {
+    //         "tab.border": "#ff740a",
+    //         "tab.activeBorder": "#0A84FF" // Active Tab Top Highlighting
+    //     }
+    // },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "window.zoomLevel": 1,
+    "cucumberautocomplete.steps": [
+      "**/*Step.java",
+      "**/*Steps.java",
+      "**/*.java"
+    ],
+    "cucumberautocomplete.syncfeatures": "features/*feature"
+}
+
